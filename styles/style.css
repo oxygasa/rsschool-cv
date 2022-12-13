@@ -1,1 +1,32 @@
-h1{background-color: rgb(223, 207, 141);font-family: 'Jura', sans-serif;}
+header{
+    background-color: #cea966;
+    text-decoration-color: #000000;
+}
+#credentials {
+    background-color: #ffead7;
+    text-decoration-color: #000000
+}
+#position-name{
+    background-color: #e0b667;
+    text-decoration-color: #000000; 
+    text-align: center;
+    margin: 0%;
+}
+main{
+    background-color: #e9ce9d;
+    text-decoration-color: #000000;
+}
+footer{
+    background-color: #ffffff;
+    text-decoration-color: #000000; 
+}
+#copyright-details{
+    background-color: #00000017;
+    text-align: center;
+}
+h3{
+    background-color: #ffead7;
+}
+h4{
+    background-color: #fce3cd;
+}
