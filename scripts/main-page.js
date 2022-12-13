@@ -1,1 +1,1 @@
-console.log("some code without spaces for bot validation")
+console.log("JS will be in the future")
