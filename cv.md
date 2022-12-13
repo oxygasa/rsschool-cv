@@ -10,6 +10,10 @@
 
 🔗 LinkedIn: https://www.linkedin.com/in/dimitrisamosiuk
 
+💻 GitHub page: https://github.com/oxygasa?tab=repositories 
+
+🎲 Discord > RS School: Dzmitry_Samasiuk(@oxygasa)
+
 ## **Java script frontend developer**
 
 ### Summary of qualification:
