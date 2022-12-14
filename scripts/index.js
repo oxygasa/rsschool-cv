@@ -1,0 +1,1 @@
+console.log("JS will be in the future")
