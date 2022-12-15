@@ -112,50 +112,48 @@
             </ul>
             <p>Code example:</p>
             <pre><code>
-                package workspaces;
+package workspaces;
                 
-                import base.BaseTest;
-                import commons.FlakingTestOneChanceToPass;
-                import org.testng.annotations.Test;
-                import pages.boards.BoardsPage;
-                import pages.boards.LeftNavigationDrawer;
-                import pages.workspaces.WorkspaceListPage;
+import base.BaseTest;
+import commons.FlakingTestOneChanceToPass;
+import org.testng.annotations.Test;
+import pages.boards.BoardsPage;
+import pages.boards.LeftNavigationDrawer;
+import pages.workspaces.WorkspaceListPage; 
+import static commons.CommonActions.driver;
                 
-                import static commons.CommonActions.driver;
+public class WorkspaceListPageTest extends BaseTest {             
+WorkspaceListPage workspaceListPage = new WorkspaceListPage(driver);
+LeftNavigationDrawer leftNavigationDrawer = new LeftNavigationDrawer(driver);
+BoardsPage boardsPage = new BoardsPage(driver);
                 
-                public class WorkspaceListPageTest extends BaseTest {
+@Test(description = "ID TRE010 Workspace page: change the information about.",
+    retryAnalyzer = FlakingTestOneChanceToPass.class,
+    groups = {"smoke", "critical_path"})
+public void changeInformationAboutWorkspaceTest() throws InterruptedException {
+    /*** Create, change workspace description field values. **/
+    workspaceListPage
+    .createNewWorkspace()
+    .navigateToEditWorkspace()
+    .editExistingWorkspaceAndAssertChanges()
+    .deleteWorkspace();
+    }
                 
-                    WorkspaceListPage workspaceListPage = new WorkspaceListPage(driver);
-                    LeftNavigationDrawer leftNavigationDrawer = new LeftNavigationDrawer(driver);
-                    BoardsPage boardsPage = new BoardsPage(driver);
-                
-                    @Test(description = "ID TRE010 Workspace page: change the information about.",
-                            retryAnalyzer = FlakingTestOneChanceToPass.class,
-                            groups = {"smoke", "critical_path"})
-                    public void changeInformationAboutWorkspaceTest() throws InterruptedException {
-                        /*** Create, change workspace description field values. **/
-                        workspaceListPage
-                                .createNewWorkspace()
-                                .navigateToEditWorkspace()
-                                .editExistingWorkspaceAndAssertChanges()
-                                .deleteWorkspace();
-                    }
-                
-                    @Test(description = "TC ID TRE011 Workspace page: Workspace page: Workspace table Premium require")
-                    public void workspaceTableTabPremiumRequireTest() throws InterruptedException {
-                        /*** Create new Workspace and navigate to the Workspace table tab.**/
-                        workspaceListPage.createNewWorkspace();
-                        String currentWorkspaceUrl = driver.getCurrentUrl();
-                        driver.navigate().refresh();
-                        Thread.sleep(5000);
-                        workspaceListPage
-                                .navigateToTableTab()
-                                .assertTableTrialAsk();
-                        /*** Post condition: Delete the workspace. **/
-                        driver.get(currentWorkspaceUrl);
-                        workspaceListPage.deleteWorkspace();
-                    }
-                }
+@Test(description = "TC ID TRE011 Workspace page: Workspace page: Workspace table Premium require")
+public void workspaceTableTabPremiumRequireTest() throws InterruptedException {
+    /*** Create new Workspace and navigate to the Workspace table tab.**/
+    workspaceListPage.createNewWorkspace();
+    String currentWorkspaceUrl = driver.getCurrentUrl();
+    driver.navigate().refresh();
+    Thread.sleep(5000);
+    workspaceListPage
+        .navigateToTableTab()
+        .assertTableTrialAsk();
+/*** Post condition: Delete the workspace. **/
+    driver.get(currentWorkspaceUrl);
+    workspaceListPage.deleteWorkspace();
+    }
+}
             </code>
         </pre>
             <h3><i>QA Engineer - Self-employed (Freelance)</i></h3>
