@@ -16,29 +16,29 @@
                 <div class="photo-container">
                     <img src="pictures/photos/profile_photo.png" width="120" height="140" alt="profile_photo">
                 </div>
-            <div class="cred-container">
-                <div class="cred-block">
-                    🖁 <a href="tel:+375292201393">Cell: +375292201393</a>
+                <div class="cred-container">
+                    <div class="cred-block">
+                        🖁 <a href="tel:+375292201393">Cell: +375292201393</a>
+                    </div>
+                    <div class="cred-block">
+                        📩 <a href="mailto:imsweet75@gmail.com">E-mail: imsweet75@gmail.com</a>
+                    </div>
+                    <div class="cred-block">
+                        📫 <a href="https://www.google.com/search?q=Minsk%2C+Belarus">Place: Minsk, Belarus.</a>
+                    </div>
                 </div>
-                <div class="cred-block">
-                    📩 <a href="mailto:imsweet75@gmail.com">E-mail: imsweet75@gmail.com</a>
-                </div>
-                <div class="cred-block">
-                    📫 <a href="https://www.google.com/search?q=Minsk%2C+Belarus">Place: Minsk, Belarus.</a>
+                <div class="cred-container">
+                    <div class="cred-block">
+                        🔗 <a href="https://www.linkedin.com/in/dimitrisamosiuk">LinkedIn link: Dimitri Samasiuk</a>
+                    </div>
+                    <div class="cred-block">
+                        💻 <a href="https://github.com/oxygasa?tab=repositories">GitHub page: oxygasa</a>
+                    </div>
+                    <div class="cred-block">
+                        🎲 <a href="https://discord.gg/PRADsJB">Discord: Dzmitry_Samasiuk (@oxygasa)</a>
+                    </div>
                 </div>
             </div>
-            <div class="cred-container">
-                <div class="cred-block">
-                    🔗 <a href="https://www.linkedin.com/in/dimitrisamosiuk">LinkedIn link: Dimitri Samasiuk</a>
-                </div>
-                <div class="cred-block">
-                    💻 <a href="https://github.com/oxygasa?tab=repositories">GitHub page: oxygasa</a>
-                </div>
-                <div class="cred-block">
-                    🎲 <a href="https://discord.gg/PRADsJB">Discord: Dzmitry_Samasiuk (@oxygasa)</a>
-                </div>
-            </div>
-        </div>
         </nav>
         <h2 id="position-name">Java script frontend developer</h2>
     </header>
@@ -84,6 +84,7 @@
             <h3><i>2016 State Technical University, Brest, Belarus</i></h3>
             <p>Economist. Bachelor. Department of Management, Economics and Finance.</p>
             <h3><i>2012 College of Business and Law, Brest, Belarus.</i></h3>
+            <p>Accountant. Associate. Department of Accounting and revision.</p>
         </article>
         <article>
             <h2>Professional experience</h2>
@@ -109,6 +110,54 @@
                         link</a>.
                 </li>
             </ul>
+            <p>Code example:</p>
+            <pre><code>
+                package workspaces;
+                
+                import base.BaseTest;
+                import commons.FlakingTestOneChanceToPass;
+                import org.testng.annotations.Test;
+                import pages.boards.BoardsPage;
+                import pages.boards.LeftNavigationDrawer;
+                import pages.workspaces.WorkspaceListPage;
+                
+                import static commons.CommonActions.driver;
+                
+                public class WorkspaceListPageTest extends BaseTest {
+                
+                    WorkspaceListPage workspaceListPage = new WorkspaceListPage(driver);
+                    LeftNavigationDrawer leftNavigationDrawer = new LeftNavigationDrawer(driver);
+                    BoardsPage boardsPage = new BoardsPage(driver);
+                
+                    @Test(description = "ID TRE010 Workspace page: change the information about.",
+                            retryAnalyzer = FlakingTestOneChanceToPass.class,
+                            groups = {"smoke", "critical_path"})
+                    public void changeInformationAboutWorkspaceTest() throws InterruptedException {
+                        /*** Create, change workspace description field values. **/
+                        workspaceListPage
+                                .createNewWorkspace()
+                                .navigateToEditWorkspace()
+                                .editExistingWorkspaceAndAssertChanges()
+                                .deleteWorkspace();
+                    }
+                
+                    @Test(description = "TC ID TRE011 Workspace page: Workspace page: Workspace table Premium require")
+                    public void workspaceTableTabPremiumRequireTest() throws InterruptedException {
+                        /*** Create new Workspace and navigate to the Workspace table tab.**/
+                        workspaceListPage.createNewWorkspace();
+                        String currentWorkspaceUrl = driver.getCurrentUrl();
+                        driver.navigate().refresh();
+                        Thread.sleep(5000);
+                        workspaceListPage
+                                .navigateToTableTab()
+                                .assertTableTrialAsk();
+                        /*** Post condition: Delete the workspace. **/
+                        driver.get(currentWorkspaceUrl);
+                        workspaceListPage.deleteWorkspace();
+                    }
+                }
+            </code>
+        </pre>
             <h3><i>QA Engineer - Self-employed (Freelance)</i></h3>
             <h3><i>Feb 2020 - Feb 2022</i></h3>
             <p>I was a self employed tester on special web platforms for testing. Platforms which I used:</p>
