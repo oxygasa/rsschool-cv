@@ -6,16 +6,26 @@
     <title>cv</title>
     <link rel="icon" href="images/assets/cv-favico.ico">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>Dzmitry Samasiuk</h1>
-        <nav id="credentials">
-            <div class="cred-and-photo-container">
-                <div class="photo-container">
-                    <img src="pictures/photos/profile_photo.png" width="120" height="140" alt="profile_photo">
+        <div id="creds-and-contacts-container">
+            <div id="photo-and-credential">
+                <div id="photo-container">
+                    <img src="pictures/photos/profile_photo.png" width="120" height="140" alt="profile_photo"
+                        id="profile_photo">
                 </div>
+                <div id="credential-container">
+                    <h1>Dzmitry Samasiuk</h1>
+                </div>
+            </div>
+
+            <div id="contacts-bar">
                 <div class="cred-container">
                     <div class="cred-block">
                         🖁 <a href="tel:+375292201393">Cell: +375292201393</a>
@@ -39,8 +49,10 @@
                     </div>
                 </div>
             </div>
-        </nav>
-        <h2 id="position-name">Java script frontend developer</h2>
+        </div>
+        <div id="position-name">
+            <h2>Java script frontend developer</h2>
+        </div>
     </header>
     <main>
         <article>
