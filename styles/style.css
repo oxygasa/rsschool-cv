@@ -1,32 +1,44 @@
 header {
-    background-color: #cea966;
-    text-decoration-color: #000000;
-}
-
-#credentials {
-    background-color: #ffead7;
+    background-color: #FDD835;
     text-decoration-color: #000000;
     display: block;
 }
-.cred-and-photo-container{
+
+#creds-and-contacts-container{
     display: flex;
-}
-.photo-container{
-    display: block;
+    justify-content: center;
+    padding-top: 42px;  
 }
 
-.cred-container{
+
+
+#photo-and-credential{
     display: block;
+    margin-right: 5%;
 }
-.cred-block{
-    display:block;
-    margin: 10px 10px 10px 10px;
+
+#photo-container{
+    float: left;
 }
-#position-name {
-    background-color: #e0b667;
-    text-decoration-color: #000000;
-    text-align: center;
-    margin: 0%;
+
+#profile_photo{
+    height: 230px;
+    width: 186px;
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+#contacts-bar {
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    background-color: #ffead7;
+    margin-top: 1%;
+    margin-bottom: 5%;
 }
 
 main {
