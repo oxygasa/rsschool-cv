@@ -5,6 +5,10 @@ header {
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
+    background-image: url(/rsschool-cv/pictures/photos/profile_photo.svg);
+    background-size: 100%;
+    background-position: left;
+    background-repeat: no-repeat;
 }
 
 #navbar {
@@ -27,9 +31,11 @@ header {
 
 #creds-and-contacts-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    align-items: baseline;
     flex-wrap: wrap;
     padding-top: 103px;
+    opacity: 0.9;
 }
 
 #photo-and-credential {
@@ -42,18 +48,10 @@ header {
     border-radius: 10px;
 }
 
-#profile_photo {
-    border: 2px solid #fdd8359d;
-    border-radius: 10px;
-    height: 280px;
-    width: 231px;
-    margin-right: 20px;
-}
-
 h1 {
     font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-    font-size: 78px;
+    font-weight: 1000;
+    font-size: 60px;
 }
 
 #contacts-bar {
@@ -70,6 +68,7 @@ h1 {
 a {
     color: black;
     font-weight: 800;
+    padding-right: 20px;
     text-decoration: none;
 }
 
@@ -88,6 +87,10 @@ a {
     font-family: 'Source Code Pro', monospace;
     font-size: 30px;
     background-color: #f5de16;
+    text-shadow: 1px 0 1px #ffffff,
+    0 1px 1px #ffffff,
+    -1px 0 1px #ffffff,
+    0 -1px 1px #ffffff;
 }
 
 #first-name-of-position {
@@ -119,6 +122,22 @@ main {
     display: block;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+#technologies-icons {
+    opacity: 0.7;
+    width: 40%;
+    max-width: 30%;
+    height: 40%;
+    max-height: 30%;
+    border: none;
+    border-radius: 10px;
 }
 
 footer {
