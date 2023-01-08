@@ -7,13 +7,13 @@ header {
     margin-top: 10px;
 }
 
-#navbar{
+#navbar {
     position: fixed;
     display: flex;
     flex-wrap: wrap;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
-    background:#fdd8359d;
+    background: #fdd8359d;
     margin-left: 20%;
     margin-right: 10%;
     padding-left: 10%;
@@ -25,80 +25,119 @@ header {
     color: #000000;
 }
 
-#creds-and-contacts-container{
+#creds-and-contacts-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding-top: 152px;  
+    padding-top: 103px;
 }
 
-#photo-and-credential{
+#photo-and-credential {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    background:#d4a33752;
+    background: #d4a33752;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
     border-radius: 10px;
 }
 
-#photo-container{
-    float: left;
-}
-
-#profile_photo{
+#profile_photo {
+    border: 2px solid #fdd8359d;
+    border-radius: 10px;
     height: 280px;
     width: 231px;
     margin-right: 20px;
 }
 
-h1{
+h1 {
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
     font-size: 78px;
 }
 
 #contacts-bar {
-    display: block;
     font-family: 'Roboto Condensed', sans-serif;
-    color: #010201;
     font-size: 20px;
-    margin-top: 1%;
-    margin-bottom: 5%;
+    margin-top: 15px;
+    padding-top: 25px;
+    margin-bottom: 25px;
+    background-color: #d4a33752;
+    border: none;
+    border-radius: 10px;
 }
 
-a{
+a {
     color: black;
     font-weight: 800;
     text-decoration: none;
 }
 
-#position-name{
+#position-block {
+    display: flex;
+    justify-content: center;
+}
+
+#position-name {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    background-image: url(/rsschool-cv/pictures/photos/java-script-logo.png);
+    background-size: 1000px 400px;
+    padding-bottom: 50px;
     font-family: 'Source Code Pro', monospace;
-    font-size: 50px;
+    font-size: 30px;
+    background-color: #f5de16;
+}
+
+#first-name-of-position {
+    color: #d87607;
+    padding-right: 8px;
+}
+
+#second-name-of-position {
+    color: #ffffff;
+    padding-right: 8px;
+}
+
+#third-name-of-position {
+    color: #065a85;
+    padding-right: 8px;
+}
+
+#fourth-name-of-position {
+    color: #71556e;
+}
+
+#fifth-name-of-position {
+    color: #b5afaf;
 }
 
 main {
-    background-color: #e9ce9d;
+    background-color: #FDD835;
     text-decoration-color: #000000;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 footer {
-    background-color: #b5afaf;
+    background-color: #FDD835;
     text-decoration-color: #000000;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-#on-top-link{
-        width: 100px;
-        background: none;
-        text-align: center;
-        padding: 10px;
-        position: fixed;
-        bottom: 50px;
-        right: 50px;
-        font-size:12px;   
+#on-top-link {
+    width: 100px;
+    background: none;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 12px;
 }
 
 #copyright-details {
