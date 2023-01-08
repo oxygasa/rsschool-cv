@@ -172,16 +172,13 @@ ul {
     font-family: 'Abel', sans-serif;
     font-size: 24px;
 }
-
-#skills-description-container{
-    display: flex;
+#english{
+    border-radius: 180px;
 }
 
 #technologies-icons {
-    width: 40%;
-    max-width: 30%;
-    height: 40%;
-    max-height: 30%;
+    width: 300px;
+    height: 250px;
     border: none;
     border-radius: 180px;
 }
@@ -197,9 +194,15 @@ ul {
 .fourth-name-of-section{
     color: #d87607;
 }
+#skills-description-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 #soft-skills-container{
     display: flex;
+    flex-wrap: wrap;
 }
 
 footer {
