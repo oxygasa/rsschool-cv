@@ -30,16 +30,50 @@ header {
     color: #000000;
 }
 
+#navbar:hover {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 20px;
+    background: #e9c10ed2;
+    margin-left: 20%;
+    margin-right: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    border: 2px solid #e06733;
+    border-radius: 10px;
+    color: #000000;   
+}
+
 #skills-link {
     color: #d87607;
+}
+
+#skills-link:hover {
+    color: #f5d1a8;
+    text-shadow: 1px 1px 1px #000000;
 }
 
 #education-link {
     color: #065a85;
 }
 
+#education-link:hover {
+    color: #c5eafd;
+    text-shadow: 1px 1px 1px #000000;
+}
+
 #experience-link {
     color: #71556e;
+}
+
+#experience-link:hover {
+    color: #f3c8ef;
+    text-shadow: 1px 1px 1px #000000;
 }
 
 #creds-and-contacts-container {
@@ -102,8 +136,57 @@ h1 {
     border-radius: 10px;
 }
 
+.contacts-tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  .contacts-tooltip .contacts-tooltip-text{
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+  
+
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .contacts-tooltip .contacts-tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+
+  .contacts-tooltip:hover .contacts-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
 a {
     color: black;
+    font-weight: 800;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1a91cc;
+    text-shadow: 1px 1px 1px #ffffff;
     font-weight: 800;
     padding-right: 20px;
     text-decoration: none;
