@@ -105,6 +105,7 @@ header:hover{
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
+    margin-right: 10px;
     transition: 2s;
 }
 
@@ -165,7 +166,7 @@ header:hover{
 }
 
 h1 {
-    transition: 2s;
+    transition: 4s;
     color: #065a85;
     font-family: 'Acme', sans-serif;
     font-weight: 1000;
@@ -189,6 +190,7 @@ h1:hover {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
     margin-top: 15px;
+    margin-right: 10px;
     padding-top: 25px;
     margin-bottom: 25px;
     background-image: url(/rsschool-cv/pictures/photos/business-card.png);
@@ -276,6 +278,7 @@ a:hover {
 }
 
 #position-name {
+    transition: 2s;
     color: #d87607;
     display: flex;
     flex-wrap: wrap;
@@ -316,6 +319,7 @@ main:hover{
 }
 
 h2 {
+    transition: 2s;
     display: flex;
     flex-wrap: wrap;
     font-family: 'Source Code Pro', monospace;
@@ -343,6 +347,30 @@ p {
 ul {
     font-family: 'Abel', sans-serif;
     font-size: 24px;
+    list-style-type: none;
+    transition: 0.5s;
+}
+
+ul:hover{
+    font-family: 'Abel', sans-serif;
+    transition: 0.5s;
+    font-size: 30px;
+    color: #324046;
+    list-style-type: none;  
+}
+
+.plain-text-not-ul{
+    font-family: 'Abel', sans-serif;
+    font-size: 24px;
+    list-style-type: none;
+    transition: 0.5s;
+}
+.plain-text-not-ul:hover{
+    font-family: 'Abel', sans-serif;
+    color: #324046;
+    font-size: 30px;
+    list-style-type: none;
+    transition: 0.5s;
 }
 
 .first-name-of-section {
@@ -361,15 +389,9 @@ ul {
     color: #d87607;
 }
 
-#skills-description-container {
+.flexing-div-with-image{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#soft-skills-container {
-    display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 footer {
@@ -393,6 +415,7 @@ footer:hover{
     position: fixed;
     bottom: 100px;
     right: 50px;
+    
 }
 
 #rsschool_logo:hover {
@@ -414,18 +437,37 @@ footer:hover{
 }
 
 h3 {
-    background-color: #ffead7;
+    transition: 0.5s;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    background: #d4a33752;
+    border-radius: 10px;
 }
 
-h4 {
-    background-color: #fce3cd;
+h3:hover {
+    transition: 0.5s;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+    font-size: 30px;
+    background: #000000;
+    color: #FDD835;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 20px;
 }
 
-img{
+.resizable{
     transition: 1s; 
 }
 
-img:hover{
+.resizable:hover{
     transition: 1s;
     height: 40%;
     width: 40%;
