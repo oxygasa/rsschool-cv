@@ -9,6 +9,13 @@ header {
     background-position: left;
     background-repeat: no-repeat;
     border-radius: 10px;
+    box-shadow: 10px 5px 5px #e067338f;
+    transition: 1s;
+}
+header:hover{
+    margin-bottom: 50px;
+    transition: 1s;
+    box-shadow: 15px 10px 10px #e067338f;
 }
 
 #navbar {
@@ -28,10 +35,12 @@ header {
     border: 2px solid #e067338f;
     border-radius: 10px;
     color: #000000;
+    transition: 1s;
 }
 
 #navbar:hover {
     position: fixed;
+    transition: 1s;
     display: flex;
     flex-wrap: wrap;
     font-family: 'Source Code Pro', monospace;
@@ -41,12 +50,13 @@ header {
     margin-right: 10%;
     padding-left: 10%;
     padding-right: 10%;
-    padding-top: 20px;
+    padding-top: 25px;
     padding-bottom: 20px;
     margin-bottom: 50px;
     border: 2px solid #e06733;
     border-radius: 10px;
-    color: #000000;   
+    color: #000000;
+    box-shadow: 10px 5px 5px #e067338f;
 }
 
 #skills-link {
@@ -54,6 +64,7 @@ header {
 }
 
 #skills-link:hover {
+    transition: 0.3s;
     color: #f5d1a8;
     text-shadow: 1px 1px 1px #000000;
 }
@@ -63,6 +74,7 @@ header {
 }
 
 #education-link:hover {
+    transition: 0.3s;
     color: #c5eafd;
     text-shadow: 1px 1px 1px #000000;
 }
@@ -72,6 +84,7 @@ header {
 }
 
 #experience-link:hover {
+    transition: 0.3s;
     color: #f3c8ef;
     text-shadow: 1px 1px 1px #000000;
 }
@@ -92,11 +105,26 @@ header {
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
+    transition: 2s;
+}
+
+#photo-and-credential:hover {
+    display: flex;
+    transition: 3s;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #d4a33752;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 20px 15px 15px #e067338f;
 }
 
 #cloud {
     font-family: 'Acme', sans-serif;
     background: #d4a33752;
+    transition: 2s;
     color: #71556e;
     border-radius: 10px;
     padding-top: 5px;
@@ -106,18 +134,52 @@ header {
     margin-right: 5px;
 }
 
+#cloud:hover {
+    transition: 0.3s;
+    font-family: 'Acme', sans-serif;
+    background: #d4a33752;
+    color: #8a7488;
+    text-shadow: 3px 3px 3px #ffffff;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 5px;
+    box-shadow: 10px 5px 5px #e067338f;
+}
+
 #greetings {
     color: #d87607;
+    transition: 2s;
+    background: none;
+    font-family: 'Acme', sans-serif;
+}
+
+#greetings:hover {
+    transition: 0.3s;
+    color: #6b3d07;
+    text-shadow: 3px 3px 3px #ffffff;
     background: none;
     font-family: 'Acme', sans-serif;
 }
 
 h1 {
+    transition: 2s;
     color: #065a85;
     font-family: 'Acme', sans-serif;
     font-weight: 1000;
     font-size: 60px;
 }
+
+h1:hover {
+    transition: 0.3s;
+    color: #0a4563;
+    text-shadow: 3px 3px 3px #ffffff;
+    font-family: 'Acme', sans-serif;
+    font-weight: 1000;
+}
+
 
 #business-card-head {
     background: none;
@@ -134,23 +196,38 @@ h1 {
     background-repeat: no-repeat;
     border: #d87607;
     border-radius: 10px;
+    transition: 2s;
+}
+
+#contacts-bar:hover {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    transition: 2s;
+    margin-top: 15px;
+    padding-top: 25px;
+    margin-bottom: 25px;
+    background-image: url(/rsschool-cv/pictures/photos/business-card.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: #d87607;
+    border-radius: 10px;
+    box-shadow: 20px 15px 15px #e067338f;
 }
 
 .contacts-tooltip {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
-  }
-  .contacts-tooltip .contacts-tooltip-text{
+}
+
+.contacts-tooltip .contacts-tooltip-text {
     visibility: hidden;
     width: 120px;
-    background-color: #555;
-    color: #fff;
+    background-color: #d4a237;
+    color: #065a85;
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
-  
-
     position: absolute;
     z-index: 1;
     bottom: 125%;
@@ -158,9 +235,9 @@ h1 {
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
-  }
-  
-  .contacts-tooltip .contacts-tooltip-text::after {
+}
+
+.contacts-tooltip .contacts-tooltip-text::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -169,13 +246,13 @@ h1 {
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-  }
-  
+}
 
-  .contacts-tooltip:hover .contacts-tooltip-text {
+
+.contacts-tooltip:hover .contacts-tooltip-text {
     visibility: visible;
     opacity: 1;
-  }
+}
 
 a {
     color: black;
@@ -185,6 +262,7 @@ a {
 }
 
 a:hover {
+    transition: 0.3s;
     color: #1a91cc;
     text-shadow: 1px 1px 1px #ffffff;
     font-weight: 800;
@@ -198,43 +276,43 @@ a:hover {
 }
 
 #position-name {
+    color: #d87607;
     display: flex;
     flex-wrap: wrap;
     font-family: 'Source Code Pro', monospace;
-    font-size: 30px;
+    font-size: 48px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: #d4a33752;
 }
 
-#first-name-of-position {
-    color: #d87607;
-    padding-right: 8px;
-}
-
-#second-name-of-position {
-    color: #ffffff;
-    padding-right: 8px;
-}
-
-#third-name-of-position {
-    color: #065a85;
-    padding-right: 8px;
-}
-
-#fourth-name-of-position {
-    color: #71556e;
-}
-
-#fifth-name-of-position {
-    color: #b5afaf;
+#position-name:hover {
+    color: #08ad1e;
+    transition: 1s;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 48px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #000000;
 }
 
 main {
+    transition: 1s;
     border-radius: 10px;
     background-color: #FDD835;
     text-decoration-color: #000000;
     display: block;
     margin-left: 20px;
     margin-right: 20px;
+    box-shadow: 10px 5px 5px #e067338f;
+}
+
+main:hover{
+    margin-bottom: 50px;
+    transition: 1s;
+    box-shadow: 15px 10px 10px #e067338f;
 }
 
 h2 {
@@ -247,6 +325,17 @@ h2 {
     border-radius: 10px;
 }
 
+h2:hover {
+    transition: 1s;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+    font-size: 30px;
+    background: #000000;
+    border-radius: 10px;
+}
+
 p {
     margin-right: 10px;
 }
@@ -255,35 +344,30 @@ ul {
     font-family: 'Abel', sans-serif;
     font-size: 24px;
 }
-#english{
-    border-radius: 180px;
+
+.first-name-of-section {
+    color: #d87607;
 }
 
-#technologies-icons {
-    width: 300px;
-    height: 250px;
-    border: none;
-    border-radius: 180px;
-}
-.first-name-of-section{
-    color: #d87607;
-}
-.second-name-of-section{
+.second-name-of-section {
     color: #ffffff;
 }
-.third-name-of-section{
+
+.third-name-of-section {
     color: #6A8759;
 }
-.fourth-name-of-section{
+
+.fourth-name-of-section {
     color: #d87607;
 }
-#skills-description-container{
+
+#skills-description-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-#soft-skills-container{
+#soft-skills-container {
     display: flex;
     flex-wrap: wrap;
 }
@@ -291,25 +375,42 @@ ul {
 footer {
     background-color: #FDD835;
     text-decoration-color: #000000;
-    display: block;
+    display: flex;
+    justify-content: space-between;
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 10px;
+    box-shadow: 10px 5px 5px #e067338f;
 }
 
+footer:hover{
+    margin-bottom: 100px;
+    transition: 1s;
+    box-shadow: 15px 10px 10px #e067338f;
+}
 #on-top-link {
-    width: 100px;
     background: none;
-    text-align: center;
-    padding: 10px;
     position: fixed;
-    bottom: 50px;
+    bottom: 100px;
     right: 50px;
-    font-size: 12px;
+}
+
+#rsschool_logo:hover {
+    transition: 1s;
+    width: 150px;
+    height: 45px;
 }
 
 #copyright-details {
-    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 20px;
+}
+
+#copyright-details:hover {
+    transition: 1s;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 23px;
+    color: #837b788f;
 }
 
 h3 {
@@ -318,4 +419,17 @@ h3 {
 
 h4 {
     background-color: #fce3cd;
+}
+
+img{
+    transition: 1s; 
+}
+
+img:hover{
+    transition: 1s;
+    height: 40%;
+    width: 40%;
+    box-shadow: 10px 5px 5px #e067338f;
+    background-color: #e067338f;
+    border-radius: 180px;
 }
