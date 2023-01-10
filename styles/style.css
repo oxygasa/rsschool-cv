@@ -394,6 +394,27 @@ ul:hover{
     justify-content: space-between;
 }
 
+#background-for-code{
+    transition: 1s;    
+    background-color: #000000;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    }
+    
+#background-for-code:hover{
+transition: 1s;    
+background-color: #000000;
+font-family: 'JetBrains Mono', monospace;
+font-size: 30px;
+}
+
+.classCode{
+    color: #A87B54;
+}
+.variableCode{
+    color: #cccac9;
+}
+
 footer {
     background-color: #FDD835;
     text-decoration-color: #000000;

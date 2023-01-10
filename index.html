@@ -15,6 +15,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -129,6 +130,8 @@
                     <p class="first-name-of-section">≤Soft skills/></p>
                 </h2>
                 <div id="soft-skills-container" class="flexing-div-with-image">
+                    <img src="pictures/photos/soft-skills.png" alt="soft-skills" id="soft-skills" width="400"
+                        height="360" class="resizable">
                     <ul>
                         <li>✔️ Diligent, can work until night without burnout.</li>
                         <li>✔️ Polite with people, helpful, I don't create conflicts, and I know how to extinguish and
@@ -143,8 +146,6 @@
                             only a
                             horizontal increase (growth as a specialist), as the most realistic and achievable.</li>
                     </ul>
-                    <img src="pictures/photos/soft-skills.png" alt="soft-skills" id="soft-skills" width="400"
-                        height="360" class="resizable">
                 </div>
                 <h2 class="section-titles">
                     <p class="first-name-of-section">≤Language> </p>
@@ -170,17 +171,18 @@
                     <p class="first-name-of-section">≤Education/></p>
                 </h2>
                 <div id="education-container" class="flexing-div-with-image">
-                <div id="education-list">
-                    <h3>🎓 July - Jan 2022 “Step” Computer Academy, Minsk, Belarus.</h3>
-                    <p class="plain-text-not-ul">Manual and Automation testing.</p>
-                    <h3>🎓 2016 State Technical University, Brest, Belarus</h3>
-                    <p class="plain-text-not-ul">Economist. Bachelor. Department of Management, Economics and Finance.
-                    </p>
-                    <h3>🎓 2012 College of Business and Law, Brest, Belarus.</h3>
-                    <p class="plain-text-not-ul">Accountant. Associate. Department of Accounting and revision.</p>
-                </div>
-                <img src="pictures/photos/degree.png" alt="cv-education-face" id="cv-education-face" width="380"
-                    height="280" class="resizable">
+                    <img src="pictures/photos/degree.png" alt="cv-education-face" id="cv-education-face" width="380"
+                        height="280" class="resizable">
+                    <div id="education-list">
+                        <h3>🎓 July - Jan 2022 “Step” Computer Academy, Minsk, Belarus.</h3>
+                        <p class="plain-text-not-ul">Manual and Automation testing.</p>
+                        <h3>🎓 2016 State Technical University, Brest, Belarus</h3>
+                        <p class="plain-text-not-ul">Economist. Bachelor. Department of Management, Economics and
+                            Finance.
+                        </p>
+                        <h3>🎓 2012 College of Business and Law, Brest, Belarus.</h3>
+                        <p class="plain-text-not-ul">Accountant. Associate. Department of Accounting and revision.</p>
+                    </div>
                 </div>
             </article>
         </section>
@@ -189,19 +191,22 @@
                 <h2 class="section-titles">
                     <p class="first-name-of-section">≤Professional experience/></p>
                 </h2>
-                <img src="pictures/photos/experience.png" alt="experience-image" id="experience-image" width="400"
-                    height="300" class="resizable">
                 <h3>Banking software maintenance (production) (Alfa-bank CJS)</h3>
                 <h3>Oct 2022 till now</h3>
-                <ul>
-                    <li>Server side bank maintenance for an operation day.</li>
-                    <li>Detect and correct runtime defects.</li>
-                    <li>Investigation bank employees' incidents through intervention in the backend. Interaction with
-                        development
-                        departments.</li>
-                    <li>Implementation testing.</li>
-                    <li>End of day work.</li>
-                </ul>
+                <div id="professional-experience-container" class="flexing-div-with-image">
+                    <img src="pictures/photos/experience.png" alt="experience-image" id="experience-image" width="400"
+                        height="300" class="resizable">
+                    <ul>
+                        <li>Server side bank maintenance for an operation day.</li>
+                        <li>Detect and correct runtime defects.</li>
+                        <li>Investigation bank employees' incidents through intervention in the backend. Interaction
+                            with
+                            development
+                            departments.</li>
+                        <li>Implementation testing.</li>
+                        <li>End of day work.</li>
+                    </ul>
+                </div>
                 <h3>Testing Automation Engineer (Intership) (Epam Systems)</h3>
                 <h3>Feb 2022 - Jun 2022</h3>
                 <ul>
@@ -215,8 +220,9 @@
                     </li>
                 </ul>
                 <p class="plain-text-not-ul">Code example:</p>
-                <code>
-package workspaces;<br> 
+                <div id="background-for-code">
+                <code class="classCode">package </code> <code class="variableCode">workspaces</code><code class="classCode">;</code><br>
+                <code> 
 <br>          
 import base.BaseTest;<br> 
 import commons.FlakingTestOneChanceToPass;<br> 
@@ -260,7 +266,7 @@ public void workspaceTableTabPremiumRequireTest() throws InterruptedException {<
     workspaceListPage.deleteWorkspace();<br> 
     }<br> 
     </code>
-
+</div>
                 <h3>QA Engineer - Self-employed (Freelance)</h3>
                 <h3>Feb 2020 - Feb 2022</h3>
                 <p class="plain-text-not-ul">I was a self employed tester on special web platforms for testing.
