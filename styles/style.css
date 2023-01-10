@@ -12,7 +12,8 @@ header {
     box-shadow: 10px 5px 5px #e067338f;
     transition: 1s;
 }
-header:hover{
+
+header:hover {
     margin-bottom: 50px;
     transition: 1s;
     box-shadow: 15px 10px 10px #e067338f;
@@ -312,7 +313,7 @@ main {
     box-shadow: 10px 5px 5px #e067338f;
 }
 
-main:hover{
+main:hover {
     margin-bottom: 50px;
     transition: 1s;
     box-shadow: 15px 10px 10px #e067338f;
@@ -351,21 +352,22 @@ ul {
     transition: 0.5s;
 }
 
-ul:hover{
+ul:hover {
     font-family: 'Abel', sans-serif;
     transition: 0.5s;
     font-size: 30px;
     color: #324046;
-    list-style-type: none;  
+    list-style-type: none;
 }
 
-.plain-text-not-ul{
+.plain-text-not-ul {
     font-family: 'Abel', sans-serif;
     font-size: 24px;
     list-style-type: none;
     transition: 0.5s;
 }
-.plain-text-not-ul:hover{
+
+.plain-text-not-ul:hover {
     font-family: 'Abel', sans-serif;
     color: #324046;
     font-size: 30px;
@@ -389,32 +391,52 @@ ul:hover{
     color: #d87607;
 }
 
-.flexing-div-with-image{
+.flexing-div-with-image {
     display: flex;
     justify-content: space-between;
 }
 
-#background-for-code{
-    transition: 1s;    
+#background-for-code {
+    transition: 1s;
     background-color: #000000;
     font-family: 'JetBrains Mono', monospace;
     font-size: 18px;
-    }
-    
-#background-for-code:hover{
-transition: 1s;    
-background-color: #000000;
-font-family: 'JetBrains Mono', monospace;
-font-size: 30px;
 }
 
-.classCode{
+#background-for-code:hover {
+    transition: 1s;
+    background-color: #000000;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 30px;
+}
+
+.class-code {
     color: #A87B54;
 }
-.variableCode{
+
+.variable-code {
     color: #cccac9;
 }
 
+.annotation-code {
+    color: #a79f34;
+}
+
+.string-code {
+    color: #727b62
+}
+
+.comment-code {
+    color: #6e6d70;
+}
+
+.object-code {
+    color: #917aaa;
+}
+
+#java{
+    float: right;
+}
 footer {
     background-color: #FDD835;
     text-decoration-color: #000000;
@@ -426,17 +448,18 @@ footer {
     box-shadow: 10px 5px 5px #e067338f;
 }
 
-footer:hover{
+footer:hover {
     margin-bottom: 100px;
     transition: 1s;
     box-shadow: 15px 10px 10px #e067338f;
 }
+
 #on-top-link {
     background: none;
     position: fixed;
     bottom: 100px;
     right: 50px;
-    
+
 }
 
 #rsschool_logo:hover {
@@ -484,11 +507,11 @@ h3:hover {
     margin-right: 20px;
 }
 
-.resizable{
-    transition: 1s; 
+.resizable {
+    transition: 1s;
 }
 
-.resizable:hover{
+.resizable:hover {
     transition: 1s;
     height: 40%;
     width: 40%;

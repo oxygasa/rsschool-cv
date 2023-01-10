@@ -221,52 +221,64 @@
                 </ul>
                 <p class="plain-text-not-ul">Code example:</p>
                 <div id="background-for-code">
-                <code class="classCode">package </code> <code class="variableCode">workspaces</code><code class="classCode">;</code><br>
-                <code> 
-<br>          
-import base.BaseTest;<br> 
-import commons.FlakingTestOneChanceToPass;<br> 
-import org.testng.annotations.Test;<br> 
-import pages.boards.BoardsPage;<br> 
-import pages.boards.LeftNavigationDrawer;<br> 
-import pages.workspaces.WorkspaceListPage;<br> 
-import static commons.CommonActions.driver;<br> 
+                    <pre>
+<code class="class-code">package </code> <code class="variable-code">workspaces</code><code class="class-code">;</code><br> <img src="images/assets/java.png" alt="java" id="java" width="100" height="150">
+<br>
+<code class="class-code">import</code><code class="variable-code"> base.BaseTest</code><code class="class-code">;</code><br> 
+<code class="class-code">import</code><code class="variable-code"> commons.FlakingTestOneChanceToPass</code><code class="class-code">;</code><br>
+<code class="class-code">import</code><code class="variable-code"> org.testng.annotations.Test</code><code class="class-code">;</code><br>
+<code class="class-code">import</code><code class="variable-code"> pages.boards.BoardsPage</code><code class="class-code">;</code><br>
+<code class="class-code">import</code><code class="variable-code"> pages.boards.LeftNavigationDrawer</code><code class="class-code">;</code><br>
+<code class="class-code">import</code><code class="variable-code"> pages.workspaces.WorkspaceListPage</code><code class="class-code">;</code><br>
+<code class="class-code">import</code><code class="variable-code"> static commons.CommonActions.driver</code><code class="class-code">;</code><br>
 </pre>
-    </code>
-                <code>
-public class WorkspaceListPageTest extends BaseTest {<br>             
-WorkspaceListPage workspaceListPage = new WorkspaceListPage(driver);<br> 
-LeftNavigationDrawer leftNavigationDrawer = new LeftNavigationDrawer(driver);<br> 
-BoardsPage boardsPage = new BoardsPage(driver);<br> 
-<br>            
-@Test(description = "ID TRE010 Workspace page: change the information about.",<br> 
-    retryAnalyzer = FlakingTestOneChanceToPass.class,<br> 
-    groups = {"smoke", "critical_path"})<br> 
-public void changeInformationAboutWorkspaceTest() throws InterruptedException {<br> 
-    /*** Create, change workspace description field values. **/<br> 
-    workspaceListPage<br> 
-    .createNewWorkspace()<br> 
-    .navigateToEditWorkspace()<br> 
-    .editExistingWorkspaceAndAssertChanges()<br> 
-    .deleteWorkspace();<br> 
-    }<br> 
-<br>             
-@Test(description = "TC ID TRE011 Workspace page: Workspace page: Workspace table Premium require")<br> 
-public void workspaceTableTabPremiumRequireTest() throws InterruptedException {<br> 
-    /*** Create new Workspace and navigate to the Workspace table tab.**/<br> 
-    workspaceListPage.createNewWorkspace();<br> 
-    String currentWorkspaceUrl = driver.getCurrentUrl();<br> 
-    driver.navigate().refresh();<br> 
-    Thread.sleep(5000);<br> 
-    workspaceListPage<br> 
-        .navigateToTableTab()<br> 
-        .assertTableTrialAsk();<br> 
-/*** Post condition: Delete the workspace. **/<br> 
-    driver.get(currentWorkspaceUrl);<br> 
-    workspaceListPage.deleteWorkspace();<br> 
-    }<br> 
-    </code>
-</div>
+                    <code class="class-code">public class</code><code
+                        class="variable-code">  WorkspaceListPageTest </code><code
+                        class="class-code">extends </code><code class="variable-code"> BaseTest {</code><br>
+                    <code class="variable-code">WorkspaceListPage workspaceListPage = </code> <code
+                        class="class-code">new</code><code class="variable-code"> WorkspaceListPage(</code><code class="object-code">driver</code><code class="variable-code">)</code><code
+                        class="class-code">;</code><br>
+                    <code class="variable-code">LeftNavigationDrawer leftNavigationDrawer = </code> <code
+                        class="class-code">new</code><code
+                        class="variable-code"> LeftNavigationDrawer(<code class="object-code"></code>driver</code>)<code class="class-code">;</code><br>
+                    <code class="variable-code">BoardsPage boardsPage = </code> <code class="class-code">new</code><code
+                        class="variable-code"> BoardsPage(</code><code class="object-code">driver</code><code class="variable-code">)</code><code class="class-code">;</code><br>
+                    <br>
+                    <code class="annotation-code">@Test</code><code class="variable-code">(description = </code> <code
+                        class="string-code">"ID TRE010 Workspace page: change the information about.",</code><br>
+                    <code class="variable-code">retryAnalyzer = FlakingTestOneChanceToPass.</code><code
+                        class="class-code">class</code><code class="variable-code">,</code><br>
+                    <code class="variable-code">groups = {</code><code
+                        class="string-code">"smoke", "critical_path"</code><code class="variable-code">})</code><br>
+                    <code class="class-code">public void </code><code
+                        class="variable-code">changeInformationAboutWorkspaceTest() </code> <code
+                        class="class-code">throws </code><code class="variable-code">InterruptedException {</code><br>
+                    <code class="comment-code">/*** Create, change workspace description field values. **/</code><br>
+                    <code class="object-code">workspaceListPage</code><br>
+                    <code class="variable-code">.createNewWorkspace()</code><br>
+                    <code class="variable-code">.navigateToEditWorkspace()</code><br>
+                    <code class="variable-code">.editExistingWorkspaceAndAssertChanges()</code><br>
+                    <code class="variable-code">.deleteWorkspace()</code><code class="class-code">;</code><br>
+                    <code class="variable-code">}</code><br>
+                    <br>
+                    <code class="annotation-code">@Test</code><code class="variable-code">(description = </code> <code
+                        class="string-code">"TC ID TRE011 Workspace page: Workspace page: Workspace table Premium
+                    require"</code><code class="variable-code">)</code><br>
+                    <code class="class-code">public void </code><code
+                        class="variable-code">workspaceTableTabPremiumRequireTest() throws InterruptedException {</code><br>
+                    <code class="comment-code">/*** Create new Workspace and navigate to the Workspace table tab.**/</code><br>
+                    <code class="object-code">workspaceListPage</code><code class="variable-code">.createNewWorkspace()</code><code class="class-code">;</code><br>
+                    <code class="class-code">String </code><code class="variable-code">currentWorkspaceUrl = driver.getCurrentUrl()</code><code class="class-code">;</code><br>
+                    <code class="object-code">driver</code><code class="variable-code">.navigate().refresh()</code><code class="class-code">;</code><br>
+                    <code class="variable-code">Thread.sleep(5000)</code><code class="class-code">;</code><br>
+                    <code class="object-code">workspaceListPage</code><br>
+                    <code class="variable-code">.navigateToTableTab()</code><br>
+                    <code class="variable-code">.assertTableTrialAsk()</code><code class="class-code">;</code><br>
+                    <code class="comment-code">/*** Post condition: Delete the workspace. **/</code><br>
+                    <code class="object-code">driver</code><code class="variable-code">.get(currentWorkspaceUrl)</code><code class="class-code">;</code><br>
+                    <code class="object-code">workspaceListPage</code><code class="variable-code">.deleteWorkspace()</code><code class="class-code">;</code><br>
+                    }<br>
+                </div>
                 <h3>QA Engineer - Self-employed (Freelance)</h3>
                 <h3>Feb 2020 - Feb 2022</h3>
                 <p class="plain-text-not-ul">I was a self employed tester on special web platforms for testing.
